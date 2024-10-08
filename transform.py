@@ -34,7 +34,8 @@ for typetag in typetags:
             bio_df, bio_info = nk.bio_process(ppg=peaks, sampling_rate=1000)
             bio_df.head()
             hrv = nk.hrv_time(bio_df, sampling_rate=1000, show=True)
-            print(f"{participant}'s RMSSD is: {hrv['HRV_RMSSD'].iloc[0]}")
+            # print(f"{participant}'s RMSSD is: {hrv['HRV_RMSSD'].iloc[0]}")
+            print(hrv)
         except Exception as e:
             print(f"{participant}'s data processing fail")
     print()
